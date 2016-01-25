@@ -1,3 +1,4 @@
+/// <reference path="baidu.maps.d.ts" />
 import {Component} from 'angular2/core';
 
 interface Hero {
@@ -7,15 +8,7 @@ interface Hero {
 
 @Component({
     selector: 'my-app',
-    template:`
-    <h1>{{title}}</h1>
-    <h2>{{hero.name}} details!</h2>
-    <div><label>id: </label>{{hero.id}}</div>
-    <div>
-      <label>name: </label>
-      <div><input [(ngModel)]="hero.name" placeholder="name"></div>
-    </div>
-    `
+    templateUrl: 'app/my-app.html',
 })
 export class AppComponent {
     public title = 'Tour of Heroes';
@@ -23,6 +16,12 @@ export class AppComponent {
         id: 1,
         name: 'Windstorm'
     };
+
+    constructor() {
+        var map = new baidu.maps.BMap("mapContainer");
+        var point = new baidu.maps.Point(116.404, 39.915);
+        map.centerAndZoom(point, 15);
+    }
 }
 
 
