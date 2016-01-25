@@ -18,9 +18,9 @@ export class AppComponent {
     };
 
     constructor() {
-        var map = new baidu.maps.BMap("mapContainer");
+        /*var map = new baidu.maps.BMap("mapContainer");
         var point = new baidu.maps.Point(116.404, 39.915);
-        map.centerAndZoom(point, 15);
+        map.centerAndZoom(point, 15);*/
     }
 }
 
