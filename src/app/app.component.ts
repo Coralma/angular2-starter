@@ -1,4 +1,3 @@
-/// <reference path="baidu.maps.d.ts" />
 import {Component} from 'angular2/core';
 
 interface Hero {
@@ -12,22 +11,21 @@ interface Hero {
 })
 export class AppComponent {
     public title = 'Tour of Heroes';
-    public hero: Hero = {
-        id: 1,
-        name: 'Windstorm'
-    };
+    public heroes = HEROES;
+    public selectedHero: Hero;
 
-    constructor() {
-        /*var map = new baidu.maps.BMap("mapContainer");
-        var point = new baidu.maps.Point(116.404, 39.915);
-        map.centerAndZoom(point, 15);*/
-    }
+    onSelect(hero: Hero) { this.selectedHero = hero; }
 }
 
-
-
-/*
- Copyright 2016 Google Inc. All Rights Reserved.
- Use of this source code is governed by an MIT-style license that
- can be found in the LICENSE file at http://angular.io/license
- */
+var HEROES: Hero[] = [
+    { "id": 11, "name": "Mr. Nice" },
+    { "id": 12, "name": "Narco" },
+    { "id": 13, "name": "Bombasto" },
+    { "id": 14, "name": "Celeritas" },
+    { "id": 15, "name": "Magneta" },
+    { "id": 16, "name": "RubberMan" },
+    { "id": 17, "name": "Dynama" },
+    { "id": 18, "name": "Dr IQ" },
+    { "id": 19, "name": "Magma" },
+    { "id": 20, "name": "Tornado" }
+];
