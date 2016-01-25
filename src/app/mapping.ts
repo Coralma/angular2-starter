@@ -1,4 +1,4 @@
-/// <reference path="./bmap.d.ts" />
+/// <reference path="./baidu.maps.d.ts" />
 
 export class BaiduMap {
 
